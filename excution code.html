@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My E-Commerce Store</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        header { background: navy; color: white; padding: 15px; }
+        .product { display: inline-block; border: 1px solid #ccc;
+                   padding: 15px; margin: 10px; }
+        button { background: green; color: white; padding: 8px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Online Store</h1>
+        <p>Cart: <span id="cart">0</span></p>
+    </header>
+
+    <div class="product">
+        <h3>Mobile Phone</h3>
+        <p>Price: ₹10,000</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Headphones</h3>
+        <p>Price: ₹1,000</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Smart Watch</h3>
+        <p>Price: ₹2,000</p>
+        <button onclick="addCart()">Add to Cart</button>
+    </div>
+
+    <script>
+        let count = 0;
+        function addCart() {
+            document.getElementById("cart").innerText = ++count;
+        }
+    </script>
+</body>
+</html>
